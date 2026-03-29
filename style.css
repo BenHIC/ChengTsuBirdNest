@@ -188,6 +188,13 @@ section {
     background-color: var(--light-bg);
 }
 
+/* SGS Image Hover Zoom Effect */
+.sgs-image-container {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
 #sgs-image {
     max-width: 600px;
     max-height: 400px;
@@ -196,6 +203,13 @@ section {
     object-fit: contain;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+#sgs-image:hover {
+    transform: scale(1.15);
 }
 
 .btn-primary {
