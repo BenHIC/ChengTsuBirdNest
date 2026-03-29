@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>成祖燕窩 - Chengzu Bird's Nest</title>
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="Assets/ChengTsu.png" alt="Chengzu Bird's Nest Logo" height="50">
+                <img src="assets/ChengTsu.png" alt="Chengzu Bird's Nest Logo" height="50" class="d-inline-block align-text-top">
                 <span id="brand-name">成祖燕窩</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -39,30 +44,30 @@
     </nav>
 
     <!-- Brand Story Section -->
-    <section id="story" class="py-5">
+    <section id="story" class="py-5 section-story">
         <div class="container">
-            <h2 id="story-title">品牌故事</h2>
-            <p id="story-content">結合明成祖朱元璋與名醫賈銘的養生對話，以及明成祖朱棣時期鄭和下西洋發現「貢燕」的傳說。</p>
+            <h2 id="story-title" class="mb-4 section-title">品牌故事</h2>
+            <p id="story-content" class="lead">結合明成祖朱元璋與名醫賈銘的養生對話，以及明成祖朱棣時期鄭和下西洋發現「貢燕」的傳說。</p>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products" class="py-5 bg-light">
+    <section id="products" class="py-5 section-products bg-light">
         <div class="container">
-            <h2 id="products-title">產品展示</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card">
-                        <img src="Assets/BirdNest_01.jpg" class="card-img-top" alt="Product 1">
+            <h2 id="products-title" class="mb-4 section-title">產品展示</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 product-card">
+                        <img src="assets/BirdNest_01.jpg" class="card-img-top product-img" alt="Product 1">
                         <div class="card-body">
                             <h5 class="card-title" id="product1-title">燕窩產品 1</h5>
                             <p class="card-text" id="product1-desc">高品質燕窩，精心挑選。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <img src="Assets/BirdNest_02.jpg" class="card-img-top" alt="Product 2">
+                <div class="col-md-6 col-lg-6">
+                    <div class="card h-100 product-card">
+                        <img src="assets/BirdNest_02.jpg" class="card-img-top product-img" alt="Product 2">
                         <div class="card-body">
                             <h5 class="card-title" id="product2-title">燕窩產品 2</h5>
                             <p class="card-text" id="product2-desc">純天然燕窩，健康養生。</p>
@@ -74,20 +79,26 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 id="contact-title">聯絡我們</h2>
-            <p id="contact-content">歡迎聯絡我們了解更多產品資訊。</p>
-            <a href="https://www.facebook.com/CTbirdsnest" target="_blank" class="btn btn-primary">
+    <section id="contact" class="py-5 section-contact">
+        <div class="container text-center">
+            <h2 id="contact-title" class="mb-4 section-title">聯絡我們</h2>
+            <p id="contact-content" class="lead mb-4">歡迎聯絡我們了解更多產品資訊。</p>
+            <a href="https://www.facebook.com/CTbirdsnest" target="_blank" class="btn btn-primary btn-lg">
                 <i class="fab fa-facebook-f"></i> Facebook
             </a>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 text-center">
+        <div class="container">
+            <p id="footer-text" class="mb-0">&copy; 2024 成祖燕窩. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

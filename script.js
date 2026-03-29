@@ -16,6 +16,7 @@ const translations = {
         product2Desc: '純天然燕窩，健康養生。',
         contactTitle: '聯絡我們',
         contactContent: '歡迎聯絡我們了解更多產品資訊。',
+        footerText: '© 2024 成祖燕窩. All rights reserved.',
         langToggle: 'EN'
     },
     en: {
@@ -32,6 +33,7 @@ const translations = {
         product2Desc: 'Pure natural bird\'s nest, healthy nourishment.',
         contactTitle: 'Contact Us',
         contactContent: 'Welcome to contact us for more product information.',
+        footerText: '© 2024 Chengzu Bird\'s Nest. All rights reserved.',
         langToggle: '中'
     }
 };
@@ -51,6 +53,7 @@ function updateLanguage() {
     document.getElementById('product2-desc').textContent = lang.product2Desc;
     document.getElementById('contact-title').textContent = lang.contactTitle;
     document.getElementById('contact-content').textContent = lang.contactContent;
+    document.getElementById('footer-text').textContent = lang.footerText;
     document.getElementById('lang-toggle').textContent = lang.langToggle;
     document.documentElement.lang = currentLang;
 }
@@ -58,6 +61,19 @@ function updateLanguage() {
 document.getElementById('lang-toggle').addEventListener('click', function() {
     currentLang = currentLang === 'zh' ? 'en' : 'zh';
     updateLanguage();
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
 
 // Initialize
