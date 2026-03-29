@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成祖燕窩 - Chengzu Bird's Nest</title>
+    <title>成祖燕窩 - Cheng Tsu Bird's Nest</title>
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
@@ -17,7 +17,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/ChengTsu.png" alt="Chengzu Bird's Nest Logo" height="50" class="d-inline-block align-text-top">
+                <img src="assets/ChengTsu.png" alt="Cheng Tsu Bird's Nest Logo" height="50"
+                    class="d-inline-block align-text-top">
                 <span id="brand-name">成祖燕窩</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -47,7 +48,7 @@
     <section id="story" class="py-5 section-story">
         <div class="container">
             <h2 id="story-title" class="mb-4 section-title">品牌故事</h2>
-            <p id="story-content" class="lead">結合明成祖朱元璋與名醫賈銘的養生對話，以及明成祖朱棣時期鄭和下西洋發現「貢燕」的傳說。</p>
+            <p id="story-content" class="lead">燕窩自古以來就被視為珍貴的滋補品，相傳在明成祖朱棣時期，鄭和下西洋時從東南亞地區帶回「貢燕」，開啟了燕窩在中國的傳播。燕窩富含蛋白質、氨基酸、鈣、鐵等多種營養成分，被譽為「東方人蔘」。成祖燕窩秉承傳統工藝，精心挑選優質燕盞，通過現代化處理技術，保留燕窩的天然營養價值，讓您在家就能享受到這份來自大自然的恩賜。</p>
         </div>
     </section>
 
@@ -55,22 +56,34 @@
     <section id="products" class="py-5 section-products bg-light">
         <div class="container">
             <h2 id="products-title" class="mb-4 section-title">產品展示</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-6">
-                    <div class="card h-100 product-card">
-                        <img src="assets/BirdNest_01.jpg" class="card-img-top product-img" alt="Product 1">
-                        <div class="card-body">
-                            <h5 class="card-title" id="product1-title">燕窩產品 1</h5>
-                            <p class="card-text" id="product1-desc">高品質燕窩，精心挑選。</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card product-card">
+                        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/BirdNest_01.jpg" class="d-block w-100 product-img" alt="乾燕盞 - 產品照片 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/BirdNest_02.jpg" class="d-block w-100 product-img" alt="乾燕盞 - 產品照片 2">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6">
-                    <div class="card h-100 product-card">
-                        <img src="assets/BirdNest_02.jpg" class="card-img-top product-img" alt="Product 2">
                         <div class="card-body">
-                            <h5 class="card-title" id="product2-title">燕窩產品 2</h5>
-                            <p class="card-text" id="product2-desc">純天然燕窩，健康養生。</p>
+                            <h5 class="card-title" id="product-title">乾燕盞</h5>
+                            <p class="card-text" id="product-desc">燕盞是燕窩的精華部位，具有最高的營養價值。富含蛋白質、氨基酸、鈣、鐵、磷等多種營養成分，具有滋陰潤肺、養顏美容、增強免疫力等功效。成祖燕窩精選優質燕盞，通過傳統手工挑揀與現代化處理技術，確保每一盞燕窩都保持最佳品質。</p>
                         </div>
                     </div>
                 </div>
