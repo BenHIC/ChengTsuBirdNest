@@ -36,19 +36,37 @@ const translations = {
 
 function updateLanguage() {
     const lang = translations[currentLang];
-    document.getElementById('brand-name').textContent = lang.brandName;
-    document.getElementById('nav-story').textContent = lang.navStory;
-    document.getElementById('nav-products').textContent = lang.navProducts;
-    document.getElementById('nav-contact').textContent = lang.navContact;
-    document.getElementById('story-title').textContent = lang.storyTitle;
-    document.getElementById('story-content').textContent = lang.storyContent;
-    document.getElementById('products-title').textContent = lang.productsTitle;
-    document.getElementById('product-title').textContent = lang.productTitle;
-    document.getElementById('product-desc').textContent = lang.productDesc;
-    document.getElementById('contact-title').textContent = lang.contactTitle;
-    document.getElementById('contact-content').textContent = lang.contactContent;
-    document.getElementById('footer-text').textContent = lang.footerText;
-    document.getElementById('lang-toggle').textContent = lang.langToggle;
+
+    // Explicit ID-based updates for critical blocks
+    const elementsById = {
+        'brand-name': lang.brandName,
+        'nav-story': lang.navStory,
+        'nav-products': lang.navProducts,
+        'nav-contact': lang.navContact,
+        'story-title': lang.storyTitle,
+        'story-content': lang.storyContent,
+        'products-title': lang.productsTitle,
+        'product-title': lang.productTitle,
+        'product-desc': lang.productDesc,
+        'contact-title': lang.contactTitle,
+        'contact-content': lang.contactContent,
+        'footer-text': lang.footerText,
+        'lang-toggle': lang.langToggle
+    };
+
+    Object.entries(elementsById).forEach(([id, text]) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    });
+
+    // Fallback: data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(node => {
+        const key = node.getAttribute('data-i18n');
+        if (key && lang[key]) {
+            node.textContent = lang[key];
+        }
+    });
+
     document.documentElement.lang = currentLang;
 }
 
