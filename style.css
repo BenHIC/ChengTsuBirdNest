@@ -183,6 +183,21 @@ section {
     font-size: 1.1rem;
 }
 
+/* SGS Report Section */
+.section-report {
+    background-color: var(--light-bg);
+}
+
+#sgs-image {
+    max-width: 600px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
 .btn-primary {
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
