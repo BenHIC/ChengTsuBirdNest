@@ -68,6 +68,12 @@ function updateLanguage() {
     });
 
     document.documentElement.lang = currentLang;
+
+    // 動態 footer 年份
+    const yearEl = document.getElementById('year-text');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 }
 
 document.getElementById('lang-toggle').addEventListener('click', function() {
