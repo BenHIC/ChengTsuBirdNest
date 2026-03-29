@@ -1,0 +1,30 @@
+/* Custom styles for Chengzu Bird's Nest website */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+#brand-name {
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+#contact a {
+    font-size: 1.2rem;
+}
